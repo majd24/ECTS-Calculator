@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title> ETCS </title>
+</head> 
+    <script>
+      function validateForm()
+        {
+            var fullName= document.getElementById("fname").value;
+            var email= document.getElementById("mail").value;
+            var contactNumber= document.getElementById("contactnum").value;
+            var comment= document.getElementById("Comment").value;
+            var mailformat = /\S+@\S+\.\S+/;
+            
+            if (fullName == "" || email == "" || contactNumber == "" || comment == "" ) 
+               {
+                alert("All inputs are Mandatory, please amend your entries and try again.");
+                
+               }
+
+            }
+        
+    
+    </script>    
+    
+
+<body>
+    
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            
+            <!--burger button block -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!--Menu items/links block -->
+            <div class="collapse navbar-collapse" id="myNavBar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>  
+                </ul>
+            </div>
+        
+        </nav>
+    
+    
+    
+    
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form action="mailto:ch200211@gmail.com" method="GET" >
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your full name.." required>
+        <label for="lname">Email</label>
+        <input type="text" id="mail" name="email" placeholder="Your email.." required>
+        <label for="lname">Contact number</label>  
+        <input type="text" id="contactnum" name="contactNumber" placeholder="Your contact number.."required>
+        <label for="subject">Comment</label>
+        <textarea id="Comment" name="Comment" placeholder="Write your comment here.." style="height:170px" required ></textarea>
+        <input onclick="validateForm();"type="submit" value="Send">
+        <input type="reset" value="Reset">
+      </form>
+    </div>
+  </div>
+</div>
+</body>
