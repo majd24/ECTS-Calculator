@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css">
+    <title> ECTS Calculate</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    
+</head>
+    
+    <script>
+        function ValidateAndCalculate()
+        {
+            var numHours= document.getElementById("numOfHours").value;
+            var numWeeks= document.getElementById("numOfWeeks").value;
+            var nameCountry= document.getElementById("country").value;  
+            var totalECTS;
+            
+            
+            if ((numHours < 1) || (numHours > 40) )
+               {
+                alert("Enter a valid number of hours per week");
+                
+               }
+            
+           else if ((numWeeks < 1 || numWeeks > 36) )
+               {
+                    alert("Please enter a vaild number of weeks");
+               }
+            
+             else if (nameCountry == "")
+               {
+                    
+                    alert("Please enter a country");
+                    
+               }
+            else if  (nameCountry == "austria" || nameCountry == "italy" || nameCountry == "spain")
+               {
+                        totalECTS = parseFloat(numHours) / 25 * parseFloat(numWeeks) ;
+                         alert("Your Total ECTS is:" + totalECTS);
+               }
+            
+             else if  (nameCountry == "finland" || nameCountry == "malta") 
+               {
+                        totalECTS = parseFloat(numHours) / 27 * parseFloat(numWeeks) ;
+                        alert("Your Total ECTS is:" + totalECTS);
+               }
+            
+             else if  (nameCountry == "netherlands" || nameCountry == "portugal") 
+               {
+                        totalECTS = parseFloat(numHours) / 28  * parseFloat(numWeeks) ;
+                         alert("Your Total ECTS is:" + totalECTS);
+               }
+            
+             else if  (nameCountry == "germany" || nameCountry == "belgium" || nameCountry == "romania" || nameCountry == "hungary") 
+               {
+                        totalECTS = parseFloat(numHours) / 30   * parseFloat(numWeeks) ;
+                        alert("Your Total ECTS is:" + totalECTS);
+               }
+            }
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+<body> 
+ <!--overall nav block -->
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            
+            <!--burger button block -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!--Menu items/links block -->
+            <div class="collapse navbar-collapse" id="myNavBar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>  
+                </ul>
+            </div>
+        
+        </nav>
+        
+    <h1 > ECTS Calculator </h1>
+    <br><br>
+    <h6>You must enter a the amount of hours of the same subject per week, then add the numbers of weeks, and select the country you study in currently.</h6>
+    <br><br>
+    
+    
+    
+    
+    <!--main div for the user input-->
+    
+    <div id="form">
+    <label for="numOfHours">Lecture hours per week:</label>
+    <br>
+    <input type="number" id="numOfHours">
+    <br>
+    
+    <label for="numOfWeeks">The number of weeks:</label>
+    <br>
+    <input type="number" id="numOfWeeks">
+    <br>
+    
+    <label for="country">Country</label>
+    <br>
+    <select id="country" name="country">
+        
+          <option value="">Select country</option>
+          <option value="austria">Austria</option>
+          <option value="belgium">Belgium</option>
+          <option value="finland">Finland</option>
+          <option value="germany">Germany</option>
+          <option value="hungary">Hungary</option>
+          <option value="italy">Italy</option>
+          <option value="malta">Malta</option>
+          <option value="netherlands">Netherlands</option>
+          <option value="portugal">Portugal</option>
+          <option value="romania"> Romania</option>
+          <option value="spain">Spain</option>
+          
+    </select>
+    <br><br>
+    <button onclick="ValidateAndCalculate()">Calculate my ECTS</button>
+        </div>
+    
+    
+    
+    
+</body>
