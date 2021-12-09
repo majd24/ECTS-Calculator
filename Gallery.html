@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gallery.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script> 
+    <title> Gallery</title>  
+    
+</head>
+
+<body>
+    
+    
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            
+            <!--burger button block -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!--Menu items/links block -->
+            <div class="collapse navbar-collapse" id="myNavBar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>  
+                </ul>
+            </div>
+        
+        </nav>
+    
+    
+    <h1>Gallery</h1> 
+    <!--overall carousel div-->
+  <div class="carousel" data-ride="carousel" id="carouselGallery">
+    <div class="carousel-inner" role="listbox">
+        
+      <div class="carousel-item active">
+        <img src="imges/pexels-christina-morillo-1181534.jpg">
+      </div>
+
+      <div class="carousel-item">
+        <img src="imges/pexels-joshua-mcknight-1139317.jpg" >
+      </div>
+    
+      <div class="carousel-item">
+        <img src="imges/pexels-julia-m-cameron-4143800.jpg" >
+      </div>
+        
+     <div class="carousel-item">
+        <img src="imges/pexels-julia-m-cameron-4144923.jpg" >
+      </div>
+        
+     <div class="carousel-item">
+        <img src="imges/pexels-julia-m-cameron-4145153.jpg" >
+      </div>
+        
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#carouselGallery" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselGallery" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+      
+          <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carouselGallery" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselGallery" data-slide-to="1"></li>
+      <li data-target="#carouselGallery" data-slide-to="2"></li>
+      <li data-target="#carouselGallery" data-slide-to="3"></li>
+      <li data-target="#carouselGallery" data-slide-to="4"></li>    
+    </ol>
+      
+  </div>
+</body>
